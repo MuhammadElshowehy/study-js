@@ -14,12 +14,19 @@ console.log("################ start challenge");
 let markWeight = 78;
 let markHeight = 1.69;
 let johnWeight = 92;
-let johnHeight = 1.95; 
+let johnHeight = 1.95;
 
-let markBMI = markWeight / (markHeight ** 2);
+let markBMI = markWeight / markHeight ** 2;
 let johnBMI = johnWeight / (johnHeight * johnHeight);
 console.log(markBMI, johnBMI);
 const markHigherBMI = markBMI > johnBMI;
 console.log(markHigherBMI);
 console.log("################ end challenge");
 // ##################
+
+console.log("these is \nmultiple \nlines");
+console.log(`these is 
+multiple 
+lines ❤❤`);
+console.log(`test emoji: ✔🌹😁😂😍😘`);
+
