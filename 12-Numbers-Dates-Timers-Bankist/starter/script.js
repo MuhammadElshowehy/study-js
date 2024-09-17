@@ -251,3 +251,12 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+console.log(new Date());
+console.log(new Date('1999-03-30'));
+
+const date = new Date();
+
+console.log(date.getTimezoneOffset());
+console.log(date.getUTCDate());
+console.log(date.toDateString());
+console.log(date.getDate());

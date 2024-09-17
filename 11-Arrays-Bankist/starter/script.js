@@ -71,6 +71,33 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
+const newSet = new Set([1, 2, 3, 4, 5, 6, 7, 8]);
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+newSet.forEach((value, key, arr) => {
+  // console.log(value, key);
+});
+
+currencies.forEach((value, key, arr) => {
+  // console.log(`${key}: ${value}`);
+});
+const names = ['mhmd', 'muhammad', 'elshowehy', 'amira', 'gamal', 'islam'];
+let biggestName = names.reduce((acc, current, index, names) => {
+  return acc.length > current.length ? acc : current;
+}, '');
+
+const numbers = [2, 0, 5, 4, 40, 60, 2];
+
+let total = numbers
+  .filter(num => num > 0)
+  .map(num => num + 1)
+  .reduce((acc, num) => acc + num);
+// console.log(total); // => 119
+
+const myArr = [1, 2, [3, [4, 5, 6], 7], 8];
+// const myArr = [[1,2],[3,4],[5,6]];
+// console.log(myArr);
+// console.log(myArr.flat());
+

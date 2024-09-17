@@ -27,3 +27,79 @@ const restaurant = {
     },
   },
 };
+
+// catch categories //
+let categories = restaurant.categories;
+// console.log(categories);
+let [one, two, three, four] = restaurant.categories;
+// console.log(one, two, three, four);
+// merge two arrays //
+const allMenu = [...restaurant.starterMenu, ...restaurant.mainMenu]
+// console.log(allMenu);
+
+let obj = {
+  fname: 'muhammad',
+  lname: 'elshowehy',
+  job: 'frontend',
+  phone: '01012345678',
+  age: 25
+}
+// for(let item of Object.entries(obj)) {
+//   console.log(item);
+// }
+const objValues = [];
+for(let [index, value] of Object.entries(obj)) {
+  // console.log(index, value);
+  objValues.push(value);
+
+}
+// console.log(objValues);
+// start Set() //
+const ingredients = new Set(['onion', 'tomato', 'cucumber', 'salt', 'water', 'water', 'potatoes']);
+// console.log(ingredients.size);
+// console.log(ingredients.keys());
+// console.log(ingredients.values());
+// console.log(ingredients.has('water'));
+ingredients.add('ice');
+// console.log(ingredients);
+// console.log(Array.isArray( ingredients));
+// ingredients.forEach(item => {
+//   console.log(item);
+// })
+for (let [index, value] of ingredients.entries()) {
+  // console.log(index);
+  // console.log(value);
+}
+let uniqueIngredients = [...ingredients];
+// console.log(uniqueIngredients);
+// end Set() //
+// start map //
+const countries = new Map();
+// console.log(countries);
+countries.set('egypt', 'poor');
+for(let [key, value] of countries) {
+  // console.log(key, value);
+}
+// console.log(countries.get('egypt'));
+// console.log(countries);
+// end map //
+
+let testObj = {
+  name: 'muhammad',
+  age: 25,
+  job: 'frontend'
+}
+
+// for (let key in testObj) {
+//   console.log(`${key}: ${testObj[key]}`);
+// }
+for(let [key, value] of Object.entries(testObj)) {
+  // console.log(key, value);
+}
+
+countries.set([1, 2], 'numbers');
+// console.log(countries);
+
+for(let [key, value] of countries.entries()) {
+  // console.log(key, value);
+}
