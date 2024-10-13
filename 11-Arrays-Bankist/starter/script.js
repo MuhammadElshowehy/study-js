@@ -74,3 +74,11 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+let numbers = [2, 4, 1, 80, 45, 0, 3];
+// numbers = numbers.toString();
+// numbers = numbers.split(',')
+// console.log(numbers);
+// console.log(numbers.sort());
+
+console.log(numbers.sort((a, b) => a - b));
