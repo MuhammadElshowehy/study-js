@@ -29,3 +29,62 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+document.addEventListener('click', function () {
+  document.body.style.setProperty('--color-primary', 'yellow');
+  document.body.style.setProperty('--color-tertiary', 'blue');
+});
+
+document.querySelector('.nav__link').addEventListener('click', function (e) {
+  console.log(e);
+  e.stopPropagation();
+  // e.preventDefault();
+
+  e.target.style.backgroundColor = 'red';
+}, false);
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  console.log(e);
+  e.stopPropagation()
+  e.target.style.backgroundColor = 'green';
+}, false);
+
+document.querySelector('.nav').addEventListener('click', function (e) {
+  console.log(e);
+  e.stopPropagation()
+  e.target.style.backgroundColor = 'blue';
+}, false);
+
+// practice on nav opacity //
+let nav = document.querySelector('.nav');
+let navItems = document.querySelectorAll('.nav__link');
+nav.addEventListener('mouseover', function(e) {
+  if (e.target.classList.contains('nav__link')) {
+    navItems.forEach((el) => {
+      el.style.opacity = 1;
+    });
+    e.target.style.opacity = 0.5;
+  } else {
+    navItems.forEach((el) => {
+      el.style.opacity = 1;
+    });
+  }
+})
+// practice on nav opacity //
+window.addEventListener('scroll', function(e) {
+  // console.log(window.scrollY);
+})
+
+// start intersections observer //
+const options = {
+  root: null,
+  threshold: 0.1,
+};
+
+const observer = new IntersectionObserver(callbackFunc, options);
+observer.observe()
+
+function callbackFunc(entries, observer) {
+  console.log(entries);
+}
+
