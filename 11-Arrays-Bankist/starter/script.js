@@ -101,3 +101,11 @@ const myArr = [1, 2, [3, [4, 5, 6], 7], 8];
 // console.log(myArr);
 // console.log(myArr.flat());
 
+
+let numbers2 = [2, 4, 1, 80, 45, 0, 3];
+// numbers = numbers.toString();
+// numbers = numbers.split(',')
+// console.log(numbers);
+// console.log(numbers.sort());
+
+console.log(numbers.sort((a, b) => a - b));

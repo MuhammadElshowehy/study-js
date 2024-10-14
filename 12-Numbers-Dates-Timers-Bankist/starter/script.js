@@ -260,3 +260,6 @@ console.log(date.getTimezoneOffset());
 console.log(date.getUTCDate());
 console.log(date.toDateString());
 console.log(date.getDate());
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 -1);
+console.log(2 ** 53);
