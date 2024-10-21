@@ -47,39 +47,70 @@
 // }
 // fetchCountryData('canada');
 
-// console.log('time start')
-// console.time('1st')
-// console.time('2nd')
-// setTimeout(() => {
-//   console.log("I'm logging after 5 sec")
-//   console.timeEnd('1st')
-// }, 5000);
-// setTimeout(() => {
-//   console.log("I'm logging after 1 sec")
-//   console.timeEnd('2nd')
-// }, 1000);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('#############  Event Loop  #############');
+
+/** simple example **/
 // console.log('script start');
 // setTimeout(function () {
-//   console.log('setTimeout');
+//   console.log('Timer');
 // }, 0);
 // Promise.resolve()
 //   .then(function () {
-//     console.log('promise1');
-//   })
-//   .then(function () {
-//     console.log('promise2');
+//     console.log('Promise');
 //   });
 // console.log('script end');
 
-console.log('start');
-setTimeout(() => {
-  console.log('timer');
-}, 0);
-Promise.resolve('promise1').then(res => console.log(res));
-Promise.resolve('promise2').then(res => {
-  for (let i = 0; i < 100; i++) {
-    console.log(res);
-  }
-});
-console.log('end');
+
+
+/** you can create a microtask **/
+// console.log('script start');
+// setTimeout(function () {
+//   console.log('Timer');
+// }, 0);
+// Promise.resolve()
+// .then(function () {
+//   console.log('Promise');
+// });
+// queueMicrotask(() => {console.log('Queue micro task')});
+// console.log('script end');
+
+
+
+/** js is a weak, cause it's a single thread language **/
+// const start = performance.now();
+// // console.log('script start: ', start);
+// setTimeout(function () {
+//   console.log('Time out');
+// }, 1000);
+// for (let i = 0; i <= 55000; i++) {
+//   console.log(i);
+// }
+// const end = performance.now();
+// // console.log('end script: ', end);
+// console.log('Time: ', ((end - start) / 1000).toFixed(2), 'second');
+
+
+
+/** Question **/
+// setTimeout(() => {
+//   console.log(num);
+// }, 0);
+// let num = 10;
+
