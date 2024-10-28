@@ -37,34 +37,26 @@
 // getCountryData('egypt');
 // getCountryData('palestine');
 
-// // fetch //
-// function fetchCountryData(country) {
-//   const request = fetch(`https://restcountries.com/v3.1/name/${country}`);
-//   request
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-//     .catch(err => console.error(err));
+// fetch //
+// async function fetchCountryData(country) {
+//   const request = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+//     let data = request.json();
+//     console.log(data);
+//     data.then(data => console.log(data))
+//     // .catch(err => console.error(err));
 // }
 // fetchCountryData('canada');
 
+// console.log(
+//   navigator.geolocation.getCurrentPosition(position => {
+//     console.log(position);
+//   }),
+//   err => {
+//     console.error(err);
+//   }
+// );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log('#############  Event Loop  #############');
+// console.log('#############  Event Loop  #############');
 
 /** simple example **/
 // console.log('script start');
@@ -77,8 +69,6 @@ console.log('#############  Event Loop  #############');
 //   });
 // console.log('script end');
 
-
-
 /** you can create a microtask **/
 // console.log('script start');
 // setTimeout(function () {
@@ -90,8 +80,6 @@ console.log('#############  Event Loop  #############');
 // });
 // queueMicrotask(() => {console.log('Queue micro task')});
 // console.log('script end');
-
-
 
 /** js is a weak, cause it's a single thread language **/
 // const start = performance.now();
@@ -106,11 +94,35 @@ console.log('#############  Event Loop  #############');
 // // console.log('end script: ', end);
 // console.log('Time: ', ((end - start) / 1000).toFixed(2), 'second');
 
-
-
 /** Question **/
 // setTimeout(() => {
 //   console.log(num);
 // }, 0);
 // let num = 10;
+// console.log('#############  Event Loop  #############');
 
+// start generic function to call API //
+async function callAPI(endpoint) {
+  try {
+    let request = await fetch(endpoint, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    return request.json();
+  } catch (err) {
+    return err;
+  }
+}
+
+async function getEgyData() {
+  try {
+    let [data] = await callAPI('https://restcountries.com/v3.1/name/egypt');
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+}
+getEgyData();
+// end generic function to call API //
