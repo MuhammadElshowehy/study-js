@@ -1,0 +1,22 @@
+{
+  "name": "study",
+  "version": "1.0.0",
+  "description": "study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhammadElshowehy/study-js.git"
+  },
+  "author": "MuhammadElshowehy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuhammadElshowehy/study-js/issues"
+  },
+  "homepage": "https://github.com/MuhammadElshowehy/study-js#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
